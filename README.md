@@ -15,3 +15,5 @@ This is a weather application.
 -The Weather Underground requires developer registration to leverage their free API.  
 -Upon registration you will receive a key, which is required for subsequent requests.
 
+===================
+spikeApp.js - Test Node.Js server
