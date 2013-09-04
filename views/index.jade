@@ -1,5 +1,19 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+    h1= title
+    p Welcome to #{title}
+
+
+    h2 Get Local Weather Information
+    form(action="/save",method="get")
+    p
+        label Enter a new City,Tx :
+        input(type='text', placeholder='new location', name='new-city')
+    p
+        input(type='submit', value='Submit')
+
+    h3 Here is local weather in some cities
+    ul
+    each city in cities
+        li In #{city.name},#{city.state} the weather is  #{city.info}
