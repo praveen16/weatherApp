@@ -1,0 +1,27 @@
+extends layout
+
+block content
+    h1= title
+    p Welcome to #{title}
+
+    <-
+    a(href='/') Home Page
+
+    h2 Get Local Weather Information
+    form(action="/detail",method="get")
+        p
+        label Enter a new City & State :
+        input(type='text', placeholder='new location', name='newcity' value='#{observation.current_observation.display_location.city}')
+        input(type='text', placeholder='State e.g: Tx ', name='newstate' value='#{observation.current_observation.display_location.state}')
+        p
+        input(type='submit', value='Submit')
+
+
+    if observation
+        h2 In #{observation.current_observation.display_location.full} the weather is #{observation.current_observation.weather}
+        img(src="#{observation.current_observation.icon_url}")
+        ul
+            li The current temperature is #{observation.current_observation.temperature_string} and it feels like #{observation.current_observation.feelslike_string}
+            li Wind : #{observation.current_observation.wind_string}
+            li Humidity : #{observation.current_observation.relative_humidity}
+

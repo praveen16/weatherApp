@@ -6,11 +6,12 @@ block content
 
 
     h2 Get Local Weather Information
-    form(action="/save",method="get")
-    p
-        label Enter a new City,Tx :
-        input(type='text', placeholder='new location', name='new-city')
-    p
+    form(action="/detail",method="get")
+        p
+        label Enter a new City & State :
+        input(type='text', placeholder='City', name='newcity')
+        input(type='text', placeholder='State e.g: Tx ', name='newstate')
+        p
         input(type='submit', value='Submit')
 
     h3 Here is local weather in some cities

@@ -5,7 +5,7 @@
 
 var express = require('express');
 var routes = require('./routes/routes');
-var user = require('./routes/user');
+var detail = require('./routes/detail');
 var http = require('http');
 var path = require('path');
 
