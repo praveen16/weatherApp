@@ -14,7 +14,7 @@ exports.index = function(req, res){
     ];
     //Setup key and URLs
     base_url_for_conditions = 'http://api.wunderground.com/api/key/conditions/q/state/city.json';
-    var wu_apikey ='ab23249d1aca89e1';
+	var wu_apikey ='API_KEY';
 
     //Synchronous process - This is so lame, never do this.
     //Get weather data for all the cities

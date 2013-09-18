@@ -9,7 +9,7 @@ exports.list = function(req, res){
 
     //Setup key and URLs
     base_url_for_conditions = 'http://api.wunderground.com/api/key/conditions/q/state/city.json';
-    var wu_apikey ='ab23249d1aca89e1';
+    var wu_apikey ='API_KEY';
 
     var city = req.query.newcity ;
     var state = req.query.newstate ;
